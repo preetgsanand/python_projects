@@ -1,0 +1,83 @@
+{% load static %}
+<html>
+	<style>
+		@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		body {	
+			padding-top: 70px !important;
+			font-family:Junction, serif !important;
+			background-size: cover !important;
+			padding-bottom:50px !important;
+		}
+		#content-row {
+			margin:0px !important;
+			padding-left: 150px !important;
+			width: 100% !important;
+		}
+
+		#obj {
+			
+			margin-top: 20px !important;
+		}
+		#obj-img {
+			background-size: cover !important;
+			background-position: center !important;
+			height: 200px !important;
+		}
+		label.title {
+			padding-top: 10px !important;
+			font-size:20px !important;
+			cursor:pointer !important;
+		}
+		label.date {
+			text-align: right !important;
+			font-weight: bold;
+		}
+		h3#title {
+
+			width:100%;
+			margin-left:40%;
+			color:white;
+			font-weight: bold;
+		}
+		
+		#page-title {
+			width: 100% !important;
+			margin-top: 50px !important;
+			font-size: 300% !important;
+		}
+		@media only screen and (max-width: 768px) {
+			#content-row {
+				padding-left: 75px !important;
+				width: 100% !important;
+			}
+
+		}
+		@media only screen and (max-width: 768px) {
+			#content-row {
+				padding-left: 10px !important;
+				width: 100% !important;
+			}
+		}
+	</style>
+	<body>
+	{% include 'navbar.html' %}
+		<div id = "content-row" class = "row">
+		<p><label id = "page-title">{{ title }}</label>
+			
+			{%for obj in queryset%}
+			<a href = "{{obj.get_absolute_url}}">
+				<div id = "obj" class = "col-lg-5 col-md-5 col-sm-12  col-xs-12" >
+					<div id = "obj-img" style = "background: url('/media/{{obj.photo}}');">
+					</div>
+					<label class="title">{{obj.title}}</label></a><br>
+				<i><label class = "date">{{obj.added}}<br></label></i>
+				</div>
+				
+			</a>
+			{%endfor%}</p>
+		</div>
+	</body>
+</html>

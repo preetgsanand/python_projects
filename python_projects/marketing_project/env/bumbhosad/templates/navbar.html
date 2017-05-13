@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    .navbar {
+      background: #212121 !important;
+      height: 70px !important;
+      padding-top: 10px !important;
+    }
+    .navbar-toggle {
+      color:white !important;
+      font-size: 100% !important;
+      border-width: 2px !important;
+      border-color: white !important;
+      width: 50px !important;
+    }
+    .navbar-nav {
+      font-size: 90% !important;
+      background: #212121 !important;
+    }
+    .navbar-right {
+      padding-right: 20px !important;
+    }
+    @media only screen and (max-width: 767px) {
+      .navbar-collapse {
+        padding: 0px !important;
+      }
+      ul.nav {
+        margin: 0px !important;
+        width: 100% !important;
+      }
+      div.nav {
+        padding: 15px !important;
+        margin: 0px !important;
+        width: 100% !important;
+      }
+    }
+
+
+  </style>
+  <head>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="https://getbootstrap.com/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    &#9776;
+    </button>
+    <a class="navbar-brand" href="/">UPDATR&#8482;</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="/health">HEALTH</a></li>
+      <li><a href="/politics">POLITICS</a></li>
+      <li><a href="/entertainment">ENTERTAINMENT</a></li>
+      <!-- <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MORE <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/finance">FINANCE</a></li>
+          <li><a href="/loans">LOANS</a></li>
+        </ul>
+      </li>-->
+      
+    </ul>
+    <div class="col-sm-3 col-md-3 nav navbar-nav">
+        <form class="navbar-form" role="search" method="GET" action="/" style="padding-bottom:0px;">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="q">
+            <div class="input-group-btn">
+                <input type="submit" class="btn btn-default" value="&#8981;">
+            </div>
+        </div>
+        </form>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="contact_us/">CONTACT US      </a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+</body>
+</html>

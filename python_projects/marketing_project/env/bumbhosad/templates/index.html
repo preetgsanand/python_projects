@@ -1,0 +1,236 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "description" content = "News and Articles">
+		<meta name = "keywords" content = "News,Articles,Agenda,India,Bollywood,Entertainment,Politics">
+		<title>
+			UPDATR&#8482; - News and Articles
+		</title>
+	</head>
+	<style type="text/css">
+		@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		body {	
+			padding-top: 70px !important;
+			font-family:Junction, serif !important;
+			background-size: cover !important;
+			padding-bottom:50px !important;
+		}
+		#content-row {
+	
+			margin:0px !important;
+			padding-left: 150px !important;
+    		justify-content: center;   
+    		align-items: center; 
+			width:100% !important;
+			align-items: center !important;
+			border-color:black !important;
+			margin-top:50px !important;
+
+			background-color:white !important;
+			opacity:0.9 !important;
+			color:black;
+			border-radius:1px;
+		}
+		.crop {
+			width:100% !important;
+			height:200px !important;
+			overflow:hidden !important;
+		}
+		.crop img {
+			border-radius:1px !important;
+			width:100%!important;
+			height:auto !important;
+			margin-bottom:10px !important;
+		}
+		label.title {
+			font-size:20px !important;
+			cursor:pointer !important;
+		}
+		label.date {
+			text-align: right !important;
+			font-weight: bold;
+		}
+		h3#title {
+			width:100%;
+			margin-left:40%;
+			color:white;
+			font-weight: bold;
+
+		}
+		#header-obj {
+			border-top: black !important;
+			height: 300px !important;
+			background-size: cover !important;
+			background-position: center !important;
+			margin-bottom: 50px !important;
+			margin: auto !important;
+		}
+		#header-title {
+			bottom:10 !important;
+			position: absolute !important; 
+			color: white !important;
+			font-size: 150% !important;
+			padding:10px !important;
+			background:black;
+		}
+		#obj {
+			height:350px !important;
+		}
+		#column-title {
+			width: 100% !important;
+			margin-top: 50px !important;
+			font-size: 300% !important;
+		}
+		#stories-row {
+			padding-top: 50px !important;
+			margin:0px !important;
+			width:100% !important;	
+			overflow:hidden !important;
+		}
+		#top-stories-title {
+			width:100% !important;
+			font-size: 150% !important;
+			color: #C62828 !important;
+		}
+		#recent-stories-title {
+			width:100% !important;
+			font-size: 150% !important;
+			color: #C62828 !important;
+		}
+		.top-stories-item-image {
+			width:45% !important;
+			height:120px !important;
+			overflow:hidden !important;
+			background-position: center !important;
+			background-size: cover !important;  
+		}
+		.top-stories-item-text {
+			text-align: justify !important;
+			width:53% !important;
+		}
+		#top-stories-item {
+			margin-top: 30px !important;
+		}
+		.top-stories-item-title {
+			font-size: 120% !important;
+		}
+		.top-stories-item-date {
+			color: black !important;
+		}
+		@media only screen and (max-width: 768px) {
+			#content-row {
+				padding-left: 75px !important;
+				width: 100% !important;
+			}
+
+		}
+		@media only screen and (max-width: 768px) {
+			#content-row {
+				padding-left: 10px !important;
+				width: 100% !important;
+			}
+		}
+
+	</style>
+	<body>
+		{% include 'navbar.html' %}
+		
+
+		<div id = "content-row" class = "row">
+		
+			<a href = "{{first.get_absolute_url}}"><div id = "header-obj" class = "col-lg-10 col-md-10 col-xs-12 col-sm-12" style = "background: url('//dl.dropboxusercontent.com/{{first.photo}}');">
+				<label id = "header-title">{{first.title}}</label>
+			</div>
+			</a>
+
+			<div class = "row" id = "stories-row">
+				<div class = "col-md-5 col-lg-5 col-sm-10 col-xs-10" id = "top-stories">
+					<label id = "top-stories-title">TOP STORIES</label>
+					<div class = "row">
+						{%for obj in top_stories%}
+						<div id = "top-stories-item" class = "col-lg-12 col-xs-12 col-sm-12 col-md-12">
+							<a href = "{{obj.get_absolute_url}}">
+								<div class = "top-stories-item-image" style = "float:left;background: url(//dl.dropboxusercontent.com/{{obj.photo}});">
+									
+								</div><br>
+
+								<div class = "top-stories-item-text" style = "float:right">
+									<label class="top-stories-item-title">{{obj.title}}</label><br>
+									<i><label class = "top-stories-item-date">{{obj.added}}<br></label></i>
+								</div>
+							</a><br>
+						</div>
+						{%endfor%}
+					</div>
+				</div>
+				<div class = "col-md-5 col-lg-5 col-sm-10 col-xs-10" id = "recent-stories">
+					<label id = "recent-stories-title">RECENT STORIES</label>
+					<div class = "row">
+						{%for obj1 in recent_stories%}
+						<div id = "top-stories-item" class = "col-lg-12 col-xs-12 col-sm-12 col-md-12">
+							<a href = "{{obj1.get_absolute_url}}">
+								<div class = "top-stories-item-image" style = "float:left;background: url(//dl.dropboxusercontent.com/{{obj1.photo}});">
+									
+								</div><br>
+
+								<div class = "top-stories-item-text" style = "float:right">
+									<label class="top-stories-item-title">{{obj1.title}}</label><br>
+									<i><label class = "top-stories-item-date">{{obj1.added}}<br></label></i>
+								</div>
+							</a><br>
+						</div>
+						{%endfor%}
+					</div>
+				</div>
+			</div>
+
+			
+			<label id = "column-title">HEALTH</label>
+		
+
+				{%for obj in health%}
+				<div id = "obj" class = "col-lg-5 col-xs-12 col-sm-10 col-md-5">
+					<a href = "{{obj.get_absolute_url}}">
+					<div class = "crop">
+						<img src = "//dl.dropboxusercontent.com/{{obj.photo}}">
+					</div><br>
+					<label class="title">{{obj.title}}</label></a><br>
+					<i><label class = "date">{{obj.added}}<br></label></i>
+				</div>
+				{%endfor%}
+
+			<label id = "column-title">POLITICS</label>
+		
+
+				{%for obj in politics%}
+				<div id = "obj" class = "col-lg-5 col-xs-12 col-sm-10 col-md-5">
+					<a href = "{{obj.get_absolute_url}}">
+					<div class = "crop">
+						<img src = "//dl.dropboxusercontent.com/{{obj.photo}}">
+					</div><br>
+					<label class="title">{{obj.title}}</label></a><br>
+					<i><label class = "date">{{obj.added}}<br></label></i>
+				</div>
+				{%endfor%}
+
+			<label id = "column-title">ENTERTAINMENT</label>
+		
+
+				{%for obj in entertainment%}
+				<div id = "obj" class = "col-lg-5 col-xs-12 col-sm-10 col-md-5">
+					<a href = "{{obj.get_absolute_url}}">
+					<div class = "crop">
+						<img src = "//dl.dropboxusercontent.com/{{obj.photo}}">
+					</div><br>
+					<label class="title">{{obj.title}}</label></a><br>
+					<i><label class = "date">{{obj.added}}<br></label></i>
+				</div>
+				{%endfor%}
+
+
+		</div>
+	</body>
+</html>

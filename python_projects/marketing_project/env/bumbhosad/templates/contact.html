@@ -1,0 +1,254 @@
+{% load static %}
+{%load crispy_forms_tags%}
+
+<html>
+	<style type="text/css">
+			@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		.parallax { 
+    		background:linear-gradient(
+      			rgba(0, 0, 10, 0.7), 
+      			rgba(0, 0, 10, 0.7)
+    			),url(/static/background/background-4.jpg);
+    		width:100%;
+    		height:100%;
+    		background-attachment: fixed;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    		padding-top:20% !important;
+		}
+		body {
+			background: #ECEFF1 !important;
+			font-family:Junction, serif !important;
+		}
+		.slogans {
+			font-family:Junction, serif !important;
+			text-align: center;
+		}
+		label#slogan {
+			width:100%;
+			text-align: center;
+			font-size: 100%;
+			color:white;
+		}
+		label#red {
+			font-size: 150% !important;
+			color:#EB2B36 !important;
+		}
+		p#red {
+			color:#EB2B36 !important;
+		}
+		#floor-solutions-bottom-row {
+			width:100%;
+			height:100%;
+		}
+		#brand {
+			font-size: 300% !important;
+			color:white !important;
+		}
+		#contact-content-row {
+			margin: 0px !important;
+			width:100% !important;
+			padding-right: 200px !important;
+			padding-left: 200px !important;
+			padding-bottom: 100px !important;
+		}
+		#contact-content-item {
+			padding-top:100px !important;
+			text-align: center !important;
+			align-content: center !important;
+		}
+		.circle {
+			padding-top:40px !important;
+			text-align: center !important;
+			vertical-align: center !important;
+			margin: auto !important;
+			height:150px !important;
+			width: 150px !important;
+			border-radius: 100px !important;
+			margin-bottom: 10px !important;
+		}
+		.fa {
+			color: white !important;
+		}
+		#map-row {
+
+
+			padding:0 100px 100px 100px !important;
+			margin: 0px !important;
+			width:100% !important;
+			text-align: center !important;
+		}
+		#map-title {
+			font-size: 200% !important;
+			color:#F44336 !important;
+			width:100% !important;
+		}
+		#map-title-subtitle {
+			width:100% !important;
+			text-align: center !important;
+			margin-bottom: 50px !important;
+		}
+		.horizontal-line {
+			margin: auto !important;
+			width:200px !important;
+			height:1px !important;
+			background: #455A64 !important;
+			margin-bottom: 50px !important;
+			margin-top: 50px !important;
+		}
+		#map {
+			border-radius: 5px !important;
+			height: 100% !important;
+		}
+		#map-address {
+			font-size: 90% !important;
+			width:100% !important;
+			text-align: center !important;
+			margin-bottom: 50px !important;
+
+		}
+		form {
+
+			padding:0px 50px 50px 50px;
+			text-align: left !important;
+		}
+		input {
+			padding:5px ;
+			font-color: white !important
+			background: rgba(0, 0, 10, 0.9);
+			width:90% !important;
+			border-radius: 2px !important;
+			border-width: 0px !important;
+		}
+		input#submit {
+			color:white !important;
+			background: #EB2B36 !important;
+		}
+		form.label {
+			text-transform: uppercase !important;
+		}
+		input.btn {
+		}
+		.asteriskField {
+    		display: none;
+		}
+		textarea {
+			border-width: 0px !important;
+			border-radius: 5px !important;
+			margin-top: 10px !important;
+			width:90% !important;
+		}
+		ul.messages {
+			font-size:100%;
+			color:#EB2B36 !important;
+			list-style-type: none;
+		}
+		@media (max-width: 767px) {
+			#map-row {
+				padding:0px 10px 10px 10px !important;
+			}
+			#contact-content-row {
+				padding:0px 10px 10px 10px !important;
+			}
+		}
+	</style>
+	<body>
+		{% include "navbar.html" %}
+		<div class = "parallax">
+			<div class = "slogans">
+				<label id = "brand">
+					Contact UPDATR 	&#8482;
+				</label>
+				<label id = "slogan">
+					Get in touch with  <label id = "red">US.</label>
+				</label>
+			</div>
+		</div>
+		<div class = "row" id = "contact-content-row">
+			<div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12" id = "contact-content-item">
+				<div class = "circle" style="background:#EEFF41;">
+					<i class = 'fa fa-phone fa-5x'></i>
+				</div>
+				<p id = "red">PHONE</p>
+				<p>011-46534537<br>011-24636677</p>
+			</div>
+			<div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12" id = "contact-content-item">
+				<div class = "circle" style="background:#F44336;">
+					<i class = 'fa fa-envelope fa-5x'></i>
+				</div>
+				<p id = "red">EMAIL</p>
+				<p><br>updatr2016@gmail.com</p>
+			</div>
+			<div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12" id = "contact-content-item">
+				<a href = "https://twitter.com/updatr2016"><div class = "circle" style="background:#90CAF9;">
+					<i class = 'fa fa-twitter fa-5x'></i>
+				</div></a>
+				<p id = "red">TWITTER</p>
+				<p><br>Tweet us</p>
+			</div>
+			<div class = "col-lg-3 col-md-3 col-sm-6 col-xs-12" id = "contact-content-item">
+				<a href = "https://www.facebook.com/updatr/"><div class = "circle" style="background:#0D47A1;">
+					<i class = 'fa fa-facebook fa-5x'></i>
+				</div></a>
+				<p id = "red">FACEBOOK</p>
+				<p><br>Follow us</p>
+			</div>
+		</div>
+
+		<div class = "row" id = "map-row">
+			
+			<div class = "col-md-6 col-lg-6 col-sm-12 col-xs-12">
+			<div class = "horizontal-line">
+			</div>
+			<label id = "map-title">FIND US</label>
+			<p id = "map-title-subtitle">Locate our office locations to reach us.</p>
+				<div id = "map">
+				</div>
+			</div>
+			<div class = "col-md-6 col-lg-6 col-sm-12 col-xs-12">
+			<div class = "horizontal-line">
+			</div>
+			<label id = "map-title">FEEDBACK</label>
+			<p id = "map-title-subtitle">Provide us with the feedback <br>of your experience with us and help us improve.</p>
+			<p>{% if messages %}
+				<ul class = "messages">
+					{% for message in messages %}
+						<li {% if message.tags %}
+							class = "{{ message.tags }}"
+							{% endif %}>
+								{{ message }}
+						</li>
+					{% endfor %}
+				</ul>
+				{% endif %}</p>
+		
+				<form method='POST'>
+				{{form|crispy}}{% csrf_token%}
+				<input class = "btn btn-block" type = "submit" value = "Submit" id ="submit" />
+			</form>
+			</div>
+		</div>
+		<script>
+      function initMap() {
+        var uluru = {lat: 28.6321504, lng: 77.0978353};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOG_bQXNmw5KfUvot38nYum2ggrGZ1XoU&callback=initMap">
+    </script>
+   	</body>
+
+
+</html>

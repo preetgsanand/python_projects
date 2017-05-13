@@ -1,0 +1,192 @@
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "description" content = "News and Articles">
+		<meta name = "keywords" content = "News,Articles,Agenda,India,Bollywood,Entertainment,Politics">
+		<title>
+			UPDATR&#8482; - {{ query.title }}
+		</title>
+	</head>
+	<style>
+		@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		body {
+			padding-top: 70px !important;
+			background-size:cover !important;
+			font-family:Junction, serif !important;
+		}
+		#obj-col {
+			margin-top:50px !important;
+			opacity:0.9!important;
+			padding:10px;
+			background-color:white !important;
+			opacity:0.9 !important;
+			color:black;
+			border-radius:1px;
+		}
+		.crop {
+			width:100%;
+			height:300px !important;
+			overflow:hidden !important;
+			background-size: cover !important;
+			background-position: center !important;
+		}
+		
+		#obj-content {
+			text-align: justify !important;
+			padding:20px !important;
+		}
+		p.buttons {
+			padding:40px !important;
+			width:50% !important;
+		}
+		label.title {
+			font-size: 30px !important;
+		}
+		label.date {
+			bottom:0 !important;
+			right:0 !important;
+			position: absolute !important;
+			font-size:15px !important;
+			margin-bottom:10px !important;
+			font-weight: bold;
+		}
+		i {
+			padding:10px !important;
+			text-shadow: 2px !important;
+			font-size: 1.5em !important;
+		}
+		ul.messages {
+			font-size:50%;
+			color:tomato;
+			list-style-type: none;
+		}
+		#obj {
+			
+			margin-top: 20px !important;
+		}
+		#obj-img {
+			background-size: cover !important;
+			background-position: center !important;
+			height: 150px !important;
+		}
+		
+		#obj-title {
+			text-align: left !important;
+			font-size: 300% !important;
+			padding:20px !important;
+		}
+		#top-stories-content {
+			width:100% !important;
+			height:auto !important;
+		}
+		.top-obj-title {
+			margin-top: 10px !important;
+			font-size: 110% !important;
+		}
+		.top-obj-date {
+			font-size: 100% !important;
+		}
+		#top-stories-title {
+			width:100% !important;
+			background: black !important;
+			font-size: 150% !important;
+			padding:10px !important;
+			color:white !important;
+		}
+		#might-also-row {
+			margin: 0px !important;
+			padding:10px !important;
+		}
+		#might-also-title {
+			width:100%;
+			font-size: 150% !important;
+			padding:10px !important;
+			color: #C62828 !important;
+		}
+		.might-also-item-image {
+			height:150px;
+			background-position: center !important;
+			background-size: cover !important;
+		}
+		#might-also-item {
+			height:270px;
+		}
+		.might-also-item-tite {
+			font-size: 100% !important;
+		}
+		.might-also-item-date {
+			font-size: 70% !important;
+		}
+		@media only screen and (max-width: 767px) {
+			.crop {
+				height:500px !important;
+			}
+			p.text {
+				float: none !important;
+				text-align: justify !important;
+				padding:20px !important;
+				width: 100% !important;
+			}
+
+		}
+	</style>
+	<body>
+		{% include "navbar.html" %}
+		<div class = "row" id = "obj-row">
+			<div id = "obj-col" class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<label id = "obj-title">{{query.title}}
+				</label><br>
+				<div class = "crop" style = "background: url('//dl.dropboxusercontent.com/{{query.photo}}');">
+					<!--<figure>
+  						<a href="//dl.dropboxusercontent.com/s/b5fz7pogx0u30sk/162.jpg">
+    						<img src="//dl.dropboxusercontent.com/s/b5fz7pogx0u30sk/162.jpg" alt="Copyright Dropbox logo type blue">
+  						</a>
+					</figure>-->
+					
+				</div><br>
+				<div class = "row" id = "top-stories-content">
+					<div class = "col-lg-8 col-md-7 col-sm-12 col-xs-12" id = "obj-content">
+						<p class = "text">{% autoescape off %}{{query.body|safe}}
+						{% endautoescape %}</p>
+					</div>
+
+					<div class = "col-lg-4 col-md-5 col-sm-12 col-xs-12" id = "top-stories">
+						<label id = "top-stories-title">TOP STORIES</label>
+						{%for obj in queryset%}
+						<a href = "{{obj.get_absolute_url}}">
+							<div id = "obj" class = "col-lg-12 col-md-12 col-sm-12  col-xs-12" >
+								<div id = "obj-img" style = "background: url('//dl.dropboxusercontent.com/{{obj.photo}}');">
+								</div>
+								<label class="top-obj-title">{{obj.title}}</label></a><br>
+								<label class = "top-obj-date">{{obj.added}}<br></label>
+							</div>
+						</a>
+						{%endfor%}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "row" id = "might-also-row">
+				<div id = "obj-col" class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class = "row">
+					<label id = "might-also-title">You also might be interested in..</label>
+						{%for obj in might_also%}
+							<div id = "might-also-item" class = "col-lg-3 col-xs-12 col-sm-6 col-md-3">
+								<a href = "{{obj.get_absolute_url}}">
+								<div class = "might-also-item-image" style="background: url('//dl.dropboxusercontent.com/{{obj.photo}}')">
+								</div>
+								<br>
+								<label class="might-also-item-title">{{obj.title}}</label></a><br>
+								<i><label class = "might-also-item-date">{{obj.added}}<br></label></i>
+							</div>
+						{%endfor%}
+					</div>
+				</div>
+		</div>
+	</body>
+</html>

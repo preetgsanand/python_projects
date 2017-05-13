@@ -1,0 +1,204 @@
+<html>
+	<head>
+		<title>
+			Floor Maintenance - SGS Floor Solutions
+		</title>
+	</head>
+	<style type="text/css">
+		@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		body {
+			font-family: 'Junction' !important;
+			background: rgba(0, 0, 10, 0.9) !important;
+			margin-top:70px !important;
+		}
+		.crop {
+			height:300px !important;
+			overflow:hidden !important;
+			width:100%;
+			padding:0px !important;
+			margin: 0px !important;
+			background: rgba(0, 0, 10, 0.7);
+		}
+		#header {
+			padding:20px !important;
+			height:300px !important;
+			background-size: cover;
+		}
+		#heading {
+			background: black !important;
+			color:white !important;
+			padding:10px;
+			font-size: 200% !important;
+			opacity: 0.7;
+			border-radius: 2px;
+		}
+		#heading_content {
+			padding:10px;
+			text-align: justify;
+			position: absolute;
+			margin-right: 20px;
+			bottom: 0 !important;
+			color: white !important;
+			border-radius: 2px;
+			width:auto;
+			z-index: 1;
+		}
+		#twister_transparent {
+			position:absolute; !important;
+			left:0 !important;
+			margin-right: -100px;
+			margin-top: -200px;
+			z-index: 0;
+			overflow: hidden;
+			padding:0px !important;
+		}
+		#header_right {
+			overflow: hidden !important;
+			height: 400px !important;
+		}
+		#twister_content {
+			padding-left:150px;
+			padding-right: 150px;
+			background: #ECEFF1 !important;
+			height:auto !important;
+			align-items: center;
+			text-align: center !important;
+		}
+		#twister_content_heading {
+			width:100%;
+			text-align: center;
+			margin-top:20px;
+			font-size: 200%;
+			padding-right:10px;
+			padding-left: 10px;
+		}
+		.twister_item_content {
+			padding:10px !important;
+			text-align: center;
+		}
+		#twister_content_item {
+			margin-bottom: 50px !important;
+			padding-top:20px !important;
+			padding-bottom: 20px !important;
+   			background: white !important;
+   			border-radius: 3px !important;
+   		}
+   		#twister_item_image {
+   			border-radius: 40px !important;
+   			height:80px !important;
+   			width:80px !important;
+   		}
+		@media (max-width: 767px) {
+   		#twister_content {
+   			padding-right:10px !important;
+   			padding-left: 10px !important;
+   		}
+   		#heading {
+   			font-size: 150% !important;
+   		}
+   		#heading_content {
+   			font-size: 100	% !important;
+   		}
+		@media (max-width: 500px) {
+   		#twister_content {
+   			padding-right:10px !important;
+   			padding-left: 10px !important;
+   		}
+   		#heading {
+   			font-size: 100% !important;
+   		}
+   		#heading_content {
+   			font-size: 80% !important;
+   		}
+   		
+   	}
+	</style>
+	{% include "navbar.html" %}
+	<body>
+	
+		<div class = "row crop" id = "header_row">
+			<div class = "col-md-6 col-lg-6 col-sm-8 col-xs-12	" id = "header">
+			<div id = "container">
+				<label id = "heading">Floor Maintenance</label>
+				<p id = "heading_content">
+				SGS Floor Solutions provide advice and tailor a floor-maintenance program for most commercial and industrial needs using the chemical-free Twister™ cleaning system.Twister™ uses diamond-infused pads that clean and polish the floor mechanically. Twister™ can be used on common floor surfaces such as terrazzo, natural stone, concrete, vinyl and epoxy. It transforms your dull, worn floors into clean, glossy and brightly polished floors. Twister™ has unique advantages that benefit both the cleaning company and the floor owner. See the Twister™ video for a demonstration.
+				</p>
+			</div>
+			</div>
+			<div class = "col-md-6 col-lg-6 col-sm-4 col-xs-6" id = "header_right">
+				<img src = "/static/twister/twister_transparent.png" id = "twister_transparent">
+			</div>
+		</div>
+		<div class = "row" id = "twister_content">
+			<label id = "twister_content_heading">THE TWISTER FAMILY</label>
+			<p>These are the complete range of twister pad services offered by us
+			</p>
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_red.png"><br><br>
+				<label class = "twister_item_title">Twister Red</label>
+				<p class = "twister_item_content">For heavy duty cleaning of worn stone floors to give it a glossy shine and smooth finish.</p>
+			</div>
+			</div>
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_white.png"><br><br>
+				<label class = "twister_item_title">Twister White</label>
+				<p class = "twister_item_content">For removing tiny scratches from the surface which are otherwise left unattended.</p>
+			</div>
+			</div>
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_yellow.png"><br><br>
+				<label class = "twister_item_title">Twister Yellow</label>
+				<p class = "twister_item_content">For intensive care and polished surface to shine the floors left by the twister white pads.</p>
+			</div>
+			</div>
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_green.png"><br><br>
+				<label class = "twister_item_title">Twister Green</label>
+				<p class = "twister_item_content">For maintaining a high gloss on the surface when used regularly in hospitals and public places.</p>
+			</div>
+			</div>
+			
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_orange.png"><br><br>
+				<label class = "twister_item_title">Twister Orange</label>
+				<p class = "twister_item_content">For deep cleaning of uncoated floors in high traffic areas like showrooms, food joints, cinema halls and other areas.</p>
+			</div>
+			</div>
+
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_blue.png"><br><br>
+				<label class = "twister_item_title">Twister Blue</label>
+				<p class = "twister_item_content">For daily cleaning of uncoated floors in high traffic areas which undergo rigorous vehicular conditions and environment.</p>
+			</div>
+			</div>
+
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_purple.png"><br><br>
+				<label class = "twister_item_title">Twister Purple</label>
+				<p class = "twister_item_content">For daily cleaning of coated floors for gloss and shine which can be easily achieved by twister purple pads.</p>
+			</div>
+			</div>
+
+			<div class = "col-md-3 col-lg-3 col-sm-6 col-xs-12">
+			<div id = "twister_content_item">
+				<img id = "twister_item_image" src = "/static/twister/twister_grey.png"><br><br>
+				<label class = "twister_item_title">Twister Grey</label>
+				<p class = "twister_item_content">A burnish pad for coated floors to prevent scratches to achieve daily restoration and maintenance of coating.</p>
+			</div>
+			</div>
+			
+		
+		</div>
+				{% include "footer.html" %}
+	</body>
+</html>

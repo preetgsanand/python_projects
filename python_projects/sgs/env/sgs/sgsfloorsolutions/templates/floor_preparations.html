@@ -1,0 +1,468 @@
+<html>
+	<style type="text/css">
+		body {
+			font-family: 'Junction' !important;
+			background: rgba(0, 0, 10, 0.9) !important;
+			margin-top:70px !important;
+		}	
+		#grinding-scarifying-title-col {
+			padding:0px !important;
+		}
+		#grinding-scarifying-parallax {
+			background:linear-gradient(
+      			rgba(0, 0, 10, 0.7), 
+      			rgba(0, 0, 10, 0.7)
+    			),url(/static/preparation/top-left-background.jpg);
+			background-attachment: fixed;
+    		background-repeat: no-repeat;
+    		background-size: cover !important;
+    		height: 100%;
+    		margin:0px !important;
+		}
+		#epoxy-removal-row {
+			width:100% !important;
+			height:100% !important;
+		}
+		#acid-etching {
+			width: 100%;
+			height:25% !important;
+			background: #C62828 !important;
+		}
+		#diamond-grinding {
+			width: 100%;
+			height:25% !important;
+			background: #D32F2F !important;
+		}
+		#scarifying {
+			width: 100%;
+			height:25% !important;
+			background: #E53935 !important;
+		}
+		#shot-blast {
+			width: 100%;
+			height:25% !important;
+			background: #EF5350 !important;
+		}
+		#grinding-scarifying-content {
+			padding: 0px !important;
+			color:white !important;
+		}
+		#grinding-scarifying-title {
+			font-size: 300% !important;
+			color: white !important;
+			padding: 50px 50px 0px 50px !important;
+		}
+		#item-icon {
+			text-align: center !important;
+			height:100% !important;
+			vertical-align: center !important;
+		}
+		.fa {
+			text-align: center !important;
+			color:white !important;
+			font-size: 600% !important;
+		}
+		#content-item-title {
+			color:white !important;
+		}
+		#item-content {
+			padding-top:30px !important;
+		}
+		#item-para {
+			margin: 0px !important;
+			width:90% !important;
+			text-align: justify;
+			font-size: 90% !important;		
+		}
+		#grinding-vs-scarifying-row{
+			margin:0px !important;
+		}
+		#epoxy-removal-row {
+			height: auto !important;
+			margin: 0px !important;
+			padding-bottom: 100px !important;
+		}
+		#epoxy-removal-title {
+			width: 100%;
+			text-align: center !important;
+			font-size: 200% !important;
+			padding-top: 50px;
+			color: white !important;
+		}
+		#epoxy-removal-step-col {
+			padding-top: 50px !important;
+			padding-left: 2px;
+			padding-right: 2px;
+			margin: 0px !important;
+			text-align: center !important;
+			align-content: center !important;
+		}
+		.step-number {
+			margin-bottom: 20px !important;
+			background:white !important;
+			height:20px !important;
+			width:20px !important;
+			border-radius: 10px !important;
+			padding:2px !important;
+		}
+		.step-heading {
+			margin-bottom: 40px !important;
+			color: white !important;
+		}
+		.step-para {
+			margin: auto !important;
+			color:white !important;
+			height:200px;
+			width:200px;
+			border-radius: 100px;
+			padding:28px;
+			font-size: 90% !important;
+		}
+		.step-line {
+			height:8px !important;
+			width: 100% !important;
+			margin-bottom: 48px !important;
+		}
+		#floor-preperation-parallax-2 {
+			background:linear-gradient(
+      			rgba(0, 0, 10, 0.7), 
+      			rgba(0, 0, 10, 0.7)
+    			),url(/static/preparation/top-left-background.jpg);
+    		width:100%;
+    		height:200px !important;
+    		background-attachment: fixed;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+		}
+		#floor-removal-leveling-row {
+			margin:0px !important;
+			padding-left:100px !important;
+			padding-right: 100px !important;
+			padding-top: 0px !important;
+			padding-bottom: 200px !important;
+			width:100% !important;
+		}
+		#floor-removal-step-col {
+			padding-top: 50px !important;
+			padding-left: 6.77% !important;
+			margin: 0px !important;
+			text-align: center !important;
+			align-content: center !important;
+		}
+		#diamond {
+			height:240px !important;
+			width: 240px !important;
+	  		-ms-transform: rotate(-45deg);
+  			-webkit-transform: rotate(-45deg);
+  			transform: rotate(-45deg);
+  			overflow: hidden;
+		}
+		#floor-removal-step {
+			text-align: center !important;
+			align-content: center !important;
+		}
+		.diamond-bottom {
+			margin-top: 170px !important;
+			height:240px !important;
+			width: 240px !important;
+	  		-ms-transform: rotate(-45deg);
+  			-webkit-transform: rotate(-45deg);
+  			transform: rotate(-45deg);
+  			overflow: hidden;
+  			background: #B71C1C !important;
+		}
+		.diamond-background {
+			margin-top:-200px !important;
+			margin-left: -250px !important;
+			width: 300% !important;
+			height: 300% !important;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			-ms-transform: rotate(45deg);
+  			-webkit-transform: rotate(45deg);
+  			transform: rotate(45deg);
+		}
+		#diamond-text {
+			-ms-transform: rotate(45deg);
+  			-webkit-transform: rotate(45deg);
+  			transform: rotate(45deg);
+  			text-align: center !important;
+  			padding-left: 50px !important;
+  			font-size: 85% !important;
+  			padding-top: 50px !important;
+  			color: white !important;
+
+		}
+		#floor-removal-title {
+			width: 100%;
+			text-align: center !important;
+			font-size: 200% !important;
+			padding-top: 50px;
+			color: white !important;
+			padding-bottom: 50px !important;
+		}
+		@media (max-width: 767px) {
+			#grinding-scarifying-title {
+				font-size: 120% !important;
+			}
+			#item-content {
+				padding-top:10px !important;
+			}
+			#item-para {
+				font-size:75% !important;
+			}
+			.fa{
+				font-size: 500% !important;
+			}
+			#floor-removal-leveling-row {
+				padding:0px !important;
+			}
+			#floor-removal-step-col {
+				margin-top: 60px !important;
+				padding:0px !important;
+			}
+			.diamond-bottom {
+				height: 250px !important;
+				width: 250px !important;
+				margin-top: 0px !important;
+				padding:0px !important;
+			}
+			#diamond {
+				height: 250px !important;
+				width: 250px !important;
+				padding:0px !important;
+			}
+			#floor-removal-step {
+				padding-left: 20% !important;
+			}
+		}
+		@media (max-width: 375px) {
+			.diamond-bottom {
+				height: 200px !important;
+				width: 200px !important;
+				margin-top: 0px !important;
+				padding:0px !important;
+			}
+			#diamond {
+				height: 200px !important;
+				width: 200px !important;
+				padding:0px !important;
+			}
+			#floor-removal-step {
+				align-content: center !important;
+				padding-left: auto !important;
+			}
+			#diamond-text {
+			-ms-transform: rotate(45deg);
+  			-webkit-transform: rotate(45deg);
+  			transform: rotate(45deg);
+  			text-align: center !important;
+  			padding-left: 35px !important;
+  			font-size: 70% !important;
+  			padding-top: 40px !important;
+  			color: white !important;
+
+		}
+		}
+	</style>
+
+	<body>
+			{% include "navbar.html" %}
+
+		<div class = "row" id = "grinding-vs-scarifying-row">
+			<div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12" id = "grinding-scarifying-title-col">
+				<div class = "parallax" id = "grinding-scarifying-parallax">
+					<label id = "grinding-scarifying-title">GRINDING VS SCARIFYING</label>
+					<div id = "grinding-scarifying-content">
+						<p style="padding:50px;text-align:justify;color:#ECEFF1">Effective surface preparation is essential for the long term successful performance of concrete flooring system overlays, particularly painted, coated or trowel applied floors such as epoxy floors for residential flooring, commercial flooring and critical industrial floor solutions. Integral Coatings &amp; Systems offers a comprehensive range of floor preparation techniques by our experienced staff from acid etching to diamond grinding, scarifying and captive shot blasting. Below is a description of some of the services we can provide.</p>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-6 col-md-6 col-sm-12 col-xs-12" id = "grinding-scarifying-content">
+				<div id = "acid-etching">
+					<div class = "row">
+						<div class = "col-lg-2 col-md-3 col-sm-2 col-xs-4" id = "item-icon">
+							<i style = "padding:20px" class = "fa fa-flask fa-5x"></i>
+						</div>
+						<div class = "col-lg-10 col-md-9 col-sm-10 col-xs-8" id = "item-content">
+							<label id = "item-title">Acid Etching</label><br>
+							<p id = "item-para">Etching concrete or tiles is a chemical treatment to the top layer of the surface. This is usually done in preparation for a coating or as an anti slip treatment to concrete or tiles.</p>
+						</div>
+					</div>
+				</div>
+				<div id = "diamond-grinding">
+					<div class = "row">
+						<div class = "col-lg-2 col-md-3 col-sm-2 col-xs-4" id = "item-icon">
+							<i style = "padding:20px" class = "fa fa-diamond fa-5x"></i>
+						</div>
+						<div class = "col-lg-10 col-md-9 col-sm-10 col-xs-8" id = "item-content">
+							<label id = "item-title">Diamond Grinding</label><br>
+							<p id = "item-para">Concrete grinding is a mechanical method of removing concrete, glues, vinyl and other contamination with abrasives such as carbide, diamond and steel installed on discs at the base.</p>
+						</div>	
+					</div>
+				</div>
+				<div id = "scarifying">
+					<div class = "row">
+						<div class = "col-lg-2 col-md-3 col-sm-2 col-xs-4" id = "item-icon">
+							<i style = "padding:20px" class = "fa fa-unlink fa-5x"></i>
+						</div>
+						<div class = "col-lg-10 col-md-9 col-sm-10 col-xs-8" id = "item-content">
+							<label id = "item-title">Scarifying</label><br>
+							<p id = "item-para">Scarrifying is accomplished by using a machine called a Scarrifyer. It operates by rotating a steel drum at high revolutions with a number of small shafts.</p>
+						</div>
+					</div>
+				</div>
+				<div id = "shot-blast">
+					<div class = "row">
+						<div class = "col-lg-2 col-md-3 col-sm-2 col-xs-4" id = "item-icon">
+							<i style = "padding:20px" class = "fa fa-bolt fa-5x"></i>
+						</div>
+						<div class = "col-lg-10 col-md-9 col-sm-10 col-xs-8" id = "item-content">
+							<label id = "item-title">Shot Blast</label><br>
+							<p id = "item-para">Shot blasting equipment propels small steel balls downward at high velocity into the concrete floor effectively chipping the concrete surface.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "row" id = "epoxy-removal-row">
+			<label id = "epoxy-removal-title">EPOXY REMOVAL</label>
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#B71C1C;">
+					</div>
+					<label class = "step-number">1</label><br>
+					<label class = "step-heading">Safety</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#2196F3;">To complete this task successfully you will need to use solvents. Solvents are a toxic chemical and need to be treated with respect. Never attempt this task unless you have a filter mask.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#C62828;">
+					</div>
+					<label class = "step-number">2</label><br>
+					<label class = "step-heading">Mopping</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#009688;">Start by mopping the floor with clean water. This will help to get rid of any debris left on the floor. It will also help remove any oil or chemicals that has fallen onto the concrete.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#D32F2F;">
+					</div>
+					<label class = "step-number">3</label><br>
+					<label class = "step-heading">Mixing</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#4CAF50;">Read the directions on the stripper or solvent bottle and mix it with the recommended amount of clean, cold water. Normally, you will be adding 1 part solvent to 10 parts water.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#E53935;">
+					</div>
+					<label class = "step-number">4</label><br>
+					<label class = "step-heading">Mopping Solvent</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#FFEB3B;">Start mopping the floor with your solvent solution. Work in slow circular motions, taking your time as you go. This will cause the epoxy paint to come away from the floor.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#EF5350;">
+					</div>
+					<label class = "step-number">5</label><br>
+					<label class = "step-heading">Removing Epoxy</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#FF9800;">Once the epoxy paint has come away from the floor you can now remove the epoxy paint by scraping it up. Throw this away and then clean your mop again using plenty of fresh water.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "col-lg-2 col-md-4 col-sm-6 col-xs-12" id = "epoxy-removal-step-col">
+				<div id = "epoxy-removal-step">
+					<div class = "step-line" style="background:#E57373;">
+					</div>
+					<label class = "step-number">6</label><br>
+					<label class = "step-heading">Repeat</label>
+					<div style="width:100%;align:center"><p class = "step-para" style = "background:#795548;">It may be necessary to repeat the process several times before you will be able to get rid of all the epoxy paint from the surface of the concrete.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class = "parallax" id = "floor-preperation-parallax-2">		
+		</div>
+
+
+		<div class = "row" id = "floor-removal-leveling-row">
+		<label id = "floor-removal-title">FLOOR REMOVAL &AMP; LEVELING</label>
+			<div class = "col-lg-2 col-md-6 col-sm-6 col-xs-10" id = "floor-removal-step-col">
+				<div id = "floor-removal-step" >
+					<div id = "diamond" style = "background:linear-gradient(
+      			rgba(0, 0, 10, 0.4), 
+      			rgba(0, 0, 10, 0.4)
+    			),url(/static/preparation/diamond-1.jpg);">
+						
+    					<p id = "diamond-text"><label>Concrete Grinding - </label>
+						The concrete skin is removed and the stronger concrete exposed. At the same time, the surface is ground level for new floor coverings.We can continue to polish the concrete into an easily cleaned, durable, high-gloss concrete floor.</p>
+
+						
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-2 col-md-6 col-sm-6 col-xs-10" id = "floor-removal-step-col">
+				<div id = "floor-removal-step">
+					<div  class = "diamond-bottom">
+						<p id = "diamond-text"><label>Thick Coverings - </label>
+						Thick coverings include epoxy, self-leveling compound, and vinyl flooring. In one sweep, up to 5 mm of epoxy or self-leveling compound can be removed with our floor-prep grinder.</p>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-2 col-md-6 col-sm-6 col-xs-10" id = "floor-removal-step-col">
+				<div id = "floor-removal-step" >
+					<div id = "diamond" style = "background:linear-gradient(
+      			rgba(0, 0, 10, 0.4), 
+      			rgba(0, 0, 10, 0.4)
+    			),url(/static/preparation/diamond-2.jpg);">
+						
+    					<p id = "diamond-text"><label>Thin Coverings - </label>
+						Adhesives, paints or lighter coatings are ground to improve the adhesion of a new covering on top of an old one. Our floor-prep grinding machines remove any irregularities in the self-leveling compound.</p>
+
+						
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-2 col-md-6 col-sm-6 col-xs-10" id = "floor-removal-step-col">
+				<div id = "floor-removal-step">
+					<div  class = "diamond-bottom">
+					<p id = "diamond-text"><label>Natural Stone - </label>
+						Grinding &amp; Restoration : Grinding natural stone surfaces is an art form that requires the skill of a craftsman and the precision of technology. We craft any type of marble, granite or terrazzo floor to the highest quality finishes.</p>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-2 col-md-6 col-sm-6 col-xs-10" id = "floor-removal-step-col">
+				<div id = "floor-removal-step" >
+					<div id = "diamond" style = "background:linear-gradient(
+      			rgba(0, 0, 10, 0.4), 
+      			rgba(0, 0, 10, 0.4)
+    			),url(/static/preparation/diamond-3.jpg);">
+						
+    					<p id = "diamond-text"><label>Wood Grinding - </label>
+						We can get close to edges and due to the unique design of the grinding head we do not need to follow the grain of the wood as required by conventional machines. Our machines, allow the floor to be ground dust-free.</p>
+
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		{% include "footer.html" %}
+	</body>
+</html>

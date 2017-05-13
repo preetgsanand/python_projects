@@ -1,0 +1,64 @@
+{% load static %}
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="https://getbootstrap.com/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style type="text/css">
+			@font-face {
+			font-family: Junction;
+			src: url("/static/font/Junction.otf") format("opentype");
+		}
+		body {
+			font-family:Junction, serif !important;
+		}
+		.parallax { 
+    		background:linear-gradient(
+      			rgba(0, 0, 10, 0.7), 
+      			rgba(0, 0, 10, 0.7)
+    			),url(/static/background.jpg);
+    		width:100%;
+    		height:100%;
+    		background-attachment: fixed;
+    		background-position: center;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    		padding-top:20% !important;
+		}
+		.slogans {
+			font-family:Junction, serif !important;
+			text-align: center;
+		}
+		label#slogan {
+			width:100%;
+			text-align: center;
+			font-size: 100%;
+			color:white;
+		}
+		label#red {
+			color:#EB2B36 !important;
+		}
+		#brand {
+			color:white !important;
+			font-size: 300% !important;
+			margin-bottom: 20px !important;
+		}
+	</style>
+	<body>
+		<div class = "parallax">
+			<div class = "slogans">
+				<label id = "brand">
+					ArtistHub &#8482;
+				</label>
+				<label id = "slogan">
+					WE WILL BE LIVE <label id = "red">SOON</label>
+				</label>
+			</div>
+		</div>
+		<div class = "row" id = "floor-solutions-concept-row">
+	</body>
+</html>
